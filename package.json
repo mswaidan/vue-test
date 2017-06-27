@@ -2,26 +2,31 @@
   "name": "speckle-admin",
   "description": "An admin frontend for Speckle-Server",
   "version": "1.0.0",
-  "author": "didimitrie< >",
+  "author": "mswaidan <mswaidan@gmail.com>",
   "private": true,
   "scripts": {
-    "dev": "cross-env NODE_ENV=development webpack-dev-server --hot --host 0.0.0.0 --port 8080 --inline",
+    "dev": "cross-env NODE_ENV=development webpack-dev-server --hot --host 0.0.0.0 --port 8888 --inline",
     "build": "cross-env NODE_ENV=production webpack --progress --hide-modules"
   },
-  "dependencies": {
-    "axios": "^0.16.1",
-    "debounce": "^1.0.2",
-    "event-emitter-es6": "^1.1.5",
-    "specklebrowser": "0.0.5",
-    "three": "^0.85.2",
-    "three-orbit-controls": "^82.1.0",
-    "three.meshline": "^1.0.3",
-    "tween.js": "^16.6.0",
-    "vue": "^2.2.1",
-    "vue-color": "^2.0.9",
-    "vue-dragging": "^1.0.6",
-    "vue-json-tree-view": "^2.0.7",
-    "vue-material": "^0.7.1",
-    "vuex": "^2.3.1"
-  },
   "devDependencies": {
+    "babel-core": "^6.1.2",
+    "babel-loader": "^6.1.0",
+    "babel-plugin-transform-runtime": "^6.1.2",
+    "babel-preset-es2015": "^6.1.2",
+    "babel-runtime": "^6.0.14",
+    "css-loader": "^0.21.0",
+    "style-loader": "^0.13.0",
+    "vue-hot-reload-api": "^1.2.1",
+    "vue-html-loader": "^1.0.0",
+    "vue-loader": "^7.0.1",
+    "webpack": "^1.12.3",
+    "webpack-dev-server": "^1.12.1"
+  },
+  "dependencies": {
+    "bootstrap": "^3.3.5",
+    "cross-env": "^5.0.1",
+    "vue": "^1.0.7",
+    "vue-resource": "^0.1.17",
+    "vue-router": "^0.7.5"
+  }
+}
