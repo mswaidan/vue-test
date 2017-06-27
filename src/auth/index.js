@@ -26,8 +26,9 @@ export default {
 
         // Redirect to a specified route
         if(redirect) {
-          router.go(redirect)        
+          router.push(redirect)        
         }
+        Vue.http.headers.common['Authorization'] = this.getAuthHeader()
 
     }).error((err) => {
       context.error = err
@@ -41,7 +42,7 @@ export default {
         localStorage.setItem('apitoken', data.user.apitoken)
 
         if(redirect) {
-          router.go(redirect)        
+          router.push(redirect)        
         }
 
     }).error((err) => {
@@ -54,6 +55,7 @@ export default {
     localStorage.removeItem('id_token')
       localStorage.removeItem('access_token')
       this.user.authenticated = false
+      delete Vue.http.headers.common['Authorization']
   },
 
   checkAuth() {
