@@ -31,8 +31,14 @@
           <input
              type="text"
              class="form-control"
-             placeholder="Name"
-             v-model="credentials.name"
+             placeholder="First Name"
+             v-model="credentials.firstname"
+             >
+          <input
+             type="text"
+             class="form-control"
+             placeholder="Last Name"
+             v-model="credentials.lastname"
              >
         </div>
           <div class="form-group">
@@ -66,7 +72,8 @@ export default {
       var credentials = {
         email: this.credentials.email,
         password: this.credentials.password,
-        name: this.credentials.name,
+        name: this.credentials.firstname,
+        surname: this.credentials.lastname,
         company: this.credentials.company
       }
       // We need to pass the component's this context
